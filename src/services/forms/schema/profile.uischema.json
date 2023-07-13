@@ -1,0 +1,28 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "scope": "#/properties/firstName"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/lastName"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/birthday"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/email",
+      "rule": {
+        "effect": "SHOW",
+        "condition": {
+          "scope": "#/properties/age",
+          "schema": { "minimum": 18 }
+        }
+      }
+    }
+  ]
+}
